@@ -37,4 +37,4 @@ Success: lumi-g successfully configured for aiida@localhost
 ```
 $ verdi code setup --config cp2k-lumi.yml
 ```
-7. cp2k should hopefully now work properly
+7. cp2k should hopefully now work properly. when submitting calculations via aiidalab, make sure the `# Tasks per node` is set to 8 and `# threads per task` is set to 7 (the number of nodes is freely selectable): ![Bildschirmfoto 2024-10-24 um 15 06 13](https://github.com/user-attachments/assets/be6ae24f-2de0-42e3-837e-cdfc6a8e1814)
