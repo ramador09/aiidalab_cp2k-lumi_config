@@ -1,0 +1,23 @@
+label: "cp2k"
+description: "cp2k"
+input_plugin: "cp2k"
+remote_abs_path: "/scratch/project_465000480/amadorra/cp2k/exe/local/cp2k.psmp"
+computer: "lumi-g"
+on_computer : "True"
+prepend_text: |
+    # set environment
+    module swap PrgEnv-cray PrgEnv-gnu
+    module swap craype-x86-rome craype-x86-trento
+    module load cray-fftw
+    module load cray-python
+    module load rocm/5.2.3
+    module load gcc/11.2.0
+    module load craype-accel-amd-gfx90a
+    module list
+    module load LUMI/23.09
+    module load partition/G
+    module load CP2K/2023.2-cpeGNU-22.08-GPU
+    module load rocm/5.3.3
+    unset SLURM_MEM_PER_GPU
+append_text: " "
+use_double_quotes: "False"
