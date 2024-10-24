@@ -2,7 +2,7 @@
 
 1. make sure you have an ssh key without password (!!) for use with LUMI and make sure it's registered to your account. more details can be found [here](https://docs.lumi-supercomputer.eu/firststeps/SSH-keys/#__tabbed_2_1).
 2. add the enclosed `lumi-g.yml` and `cp2k-lumi.yml` files to your home directory on aiidalab. these files contain the configuration parameters to setup the aiidalab computer on lumi-g as well as setting up cp2k.
-3. open the `lumi-g.yml` file and change the `work_dir` to your working directory. you might also need to change the path (and modify the permissions) for the `select_gpu.sh` file.
+3. open the `lumi-g.yml` file and change the `work_dir` to your working directory; you might also need to change the path (and modify the permissions) for the `select_gpu.sh` file. save and close the `lumi-g.yml` file. then open the `cp2k-lumi.yml` file to check if there's anything that might need to be changed (probably/hopefully not), and then save/close it.
 4. using the lumi-g.yml file, we first want to setup the computer. execute in the aiidalab terminal:
 ```
 $ verdi computer setup --config lumi-g.yml
