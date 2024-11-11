@@ -15,6 +15,7 @@ prepend_text: |
     #SBATCH --account project_465000480
     #SBATCH --exclusive
     #SBATCH --gres=gpu:mi250:8
+    #SBATCH --mem=400G
     export MPICH_VERSION_DISPLAY=1
     export GTL_VERSION_DISPLAY=1
     export OMP_PLACES=cores
