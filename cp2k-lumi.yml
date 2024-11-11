@@ -6,7 +6,9 @@ computer: "lumi-g"
 on_computer : "True"
 prepend_text: |
     # set environment
+    module load PrgEnv-cray
     module swap PrgEnv-cray PrgEnv-gnu
+    module load craype-x86-rome
     module swap craype-x86-rome craype-x86-trento
     module load cray-fftw
     module load cray-python
